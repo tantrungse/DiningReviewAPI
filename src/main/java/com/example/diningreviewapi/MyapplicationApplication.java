@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.diningreviewapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
