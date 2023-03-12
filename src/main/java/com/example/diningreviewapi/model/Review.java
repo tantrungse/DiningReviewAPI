@@ -1,8 +1,6 @@
 package com.example.diningreviewapi.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "dining_review")
+@Table(name = "review")
 public class Review {
     @Column(nullable = false, unique = true)
     private String displayName;
@@ -32,4 +30,7 @@ public class Review {
 
     @Column
     private String commentary;
+
+    @Enumerated(EnumType.STRING)
+    private ReviewStatus status;
 }
